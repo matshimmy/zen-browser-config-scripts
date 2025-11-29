@@ -1,0 +1,62 @@
+/* ==========================================================================
+   1. THE "MASTER HIDE" LIST
+   ========================================================================== */
+/* TAB & TOP BAR ELEMENTS */
+image.tab-close-button,                       /* Close Tab X */
+.zen-workspace-pinned-tabs-section,           /* Pinned Tabs Area - line with clear button */
+.zen-current-workspace-indicator,             /* Workspace Label */
+/* TAB CONTEXT MENU (Right-click Tab) */
+#context_openANewTab,
+#zen-context-menu-new-folder,
+#zen-context-menu-new-folder-toolbar,
+#context_reloadTab,
+#context_pinTab,
+#context_unpinTab,
+#context_zen-add-essential,
+#context-zen-change-workspace-tab,
+#context_sendTabToDevice,
+#context_reopenInContainer,
+.share-tab-url-item,                          /* Share Button */
+#context_ungroupTab + menuseparator,          /* Separator after Ungroup */
+/* TEXT SELECTION MENU (Right-click Highlight) */
+#context-print-selection,
+#context-take-screenshot,
+#context-viewpartialsource-selection,
+#context-inspect-a11y,
+#context-inspect,
+#context-sep-highlights,                      /* Separator 1 */
+#frame-sep,                                   /* Separator 2 */
+#context-media-eme-separator,                 /* DRM Separator */
+#context-sep-bidi,
+/* LINK CONTEXT MENU (Right-click Link) */
+#context-openlinkinusercontext-menu,          /* Open in Container */
+#context-stripOnShareLink,                    /* Tracking Protection Copy */
+#context-sendlinktodevice,
+#context-copy-clean-link-to-highlight,
+/* BOOKMARKS CONTEXT MENU (Right-click Bookmark) */
+#show-other-bookmarks_PersonalToolbar,        /* "Other Bookmarks" */
+#placesContext_open\:newcontainertab,
+#placesContext_new\:separator,
+#placesContext_cut,
+/* NEW TAB BUTTON (Right-click New Tab Button) */
+#new-tab-button-popup
+{
+    display: none !important;
+}
+
+/* ==========================================================================
+   2. SPECIAL LOGIC
+   ========================================================================== */
+/* HIDE EXTENSION in context menu (Matches by Name) */
+menu[label*="AdBlock"] {
+    display: none !important;
+}
+/* COMPACT MODE BEHAVIOR (Hide Sidebar, Keep Top Bar) */
+:root[zen-compact-mode="true"] #navigator-toolbox:not([zen-compact-mode-active]) {
+    display: none !important;
+}
+
+/* DISABLE AUDIO BUTTON IN TABS */
+.tab-audio-button {
+    pointer-events: none !important;
+}

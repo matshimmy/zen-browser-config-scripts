@@ -57,8 +57,8 @@ set_symlink() {
 }
 
 # Create symlinks
-set_symlink "$CHROME_DIR/userChrome.css" "$SCRIPT_DIR/userChrome.css"
-set_symlink "$PROFILE_DIR/user.js" "$SCRIPT_DIR/user.js"
+set_symlink "$CHROME_DIR/userChrome.css" "$SCRIPT_DIR/../userChrome.css"
+set_symlink "$PROFILE_DIR/user.js" "$SCRIPT_DIR/../user.js"
 
 echo ""
 echo "Setup complete!"

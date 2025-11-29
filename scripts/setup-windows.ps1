@@ -109,11 +109,11 @@ function Set-Symlink {
 
 # Create/refresh symlinks
 $UserChromeTarget = Join-Path $ChromeDir 'userChrome.css'
-$UserChromeSource = Join-Path $ScriptDir 'userChrome.css'
+$UserChromeSource = Join-Path $ScriptDir '..\userChrome.css'
 Set-Symlink -TargetPath $UserChromeTarget -SourcePath $UserChromeSource
 
 $UserJsTarget = Join-Path $ProfileDir 'user.js'
-$UserJsSource = Join-Path $ScriptDir 'user.js'
+$UserJsSource = Join-Path $ScriptDir '..\user.js'
 Set-Symlink -TargetPath $UserJsTarget -SourcePath $UserJsSource
 
 Write-Host ""

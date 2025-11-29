@@ -40,8 +40,8 @@ if not exist "%CHROME_DIR%" (
     exit /b 1
 )
 
-call :ensure_symlink "%CHROME_DIR%\userChrome.css" "%SCRIPT_DIR%\userChrome.css"
-call :ensure_symlink "%PROFILE_DIR%\user.js" "%SCRIPT_DIR%\user.js"
+call :ensure_symlink "%CHROME_DIR%\userChrome.css" "%SCRIPT_DIR%\..\userChrome.css"
+call :ensure_symlink "%PROFILE_DIR%\user.js" "%SCRIPT_DIR%\..\user.js"
 goto :done
 
 :ensure_symlink

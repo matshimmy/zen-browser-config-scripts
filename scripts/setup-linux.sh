@@ -65,4 +65,14 @@ echo "Setup complete!"
 echo "  userChrome.css -> $CHROME_DIR/userChrome.css"
 echo "  user.js        -> $PROFILE_DIR/user.js"
 echo ""
+
+# Grant Zen Browser read-only access to this repo (if running as Flatpak)
+if flatpak list --app 2>/dev/null | grep -q "app.zen_browser.zen"; then
+    REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+    echo "Granting Zen Browser read-only access to config repo at $REPO_ROOT"
+    flatpak override --user app.zen_browser.zen --filesystem="$REPO_ROOT:ro"
+else
+    echo "Note: Zen Browser is not installed via Flatpak, skipping filesystem override"
+fi
+
 echo "Restart Zen Browser to apply changes."

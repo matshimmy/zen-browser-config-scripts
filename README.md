@@ -11,11 +11,10 @@ Personal configuration files for Zen Browser.
 
 ### Linux
 ```bash
-chmod +x scripts/setup-linux.sh
 ./scripts/setup-linux.sh
 ```
 
 ### Windows
-Run `scripts/setup-windows.bat` as Administrator, or enable Developer Mode first.
+Run `scripts/setup-windows.ps1`.
 
 Restart Zen Browser after setup. Config files are symlinked, so edits apply on browser restart.

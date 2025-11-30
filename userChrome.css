@@ -39,7 +39,9 @@ image.tab-close-button,                       /* Close Tab X */
 #placesContext_new\:separator,
 #placesContext_cut,
 /* NEW TAB BUTTON (Right-click New Tab Button) */
-#new-tab-button-popup
+#new-tab-button-popup,
+/* MAIN CONTENT AREA CONTEXT MENU (Right-click Main Content Area) */
+#context-sep-selectall
 {
     display: none !important;
 }

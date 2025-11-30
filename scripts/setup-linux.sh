@@ -7,7 +7,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Zen profiles directory
-ZEN_DIR="$HOME/.zen"
+ZEN_DIR="$HOME/.var/app/app.zen_browser.zen/.zen"
 if [ ! -d "$ZEN_DIR" ]; then
     echo "Error: Zen directory not found at $ZEN_DIR"
     echo "Make sure Zen Browser is installed and has been run at least once."
@@ -15,7 +15,7 @@ if [ ! -d "$ZEN_DIR" ]; then
 fi
 
 # Find the default profile
-PROFILE_DIR=$(find "$ZEN_DIR" -maxdepth 1 -type d -name "*.default*" | head -n 1)
+PROFILE_DIR=$(find "$ZEN_DIR" -maxdepth 1 -type d -name "*.Default (release)" | head -n 1)
 if [ -z "$PROFILE_DIR" ]; then
     echo "Error: Could not find Zen profile directory"
     exit 1

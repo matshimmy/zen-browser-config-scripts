@@ -34,13 +34,13 @@ if (-not (Test-Path -LiteralPath $ZenDir)) {
 
 Write-Host "Looking for profile under: $ZenDir"
 
-# Find first profile matching *.Default (release)
+# Find first profile matching *.Default (twilight)
 $profileItem = Get-ChildItem -LiteralPath $ZenDir -Directory |
-Where-Object { $_.Name -like '*.Default (release)*' } |
+Where-Object { $_.Name -like '*.Default (twilight)*' } |
 Select-Object -First 1
 
 if (-not $profileItem) {
-    Write-Host "Error: Could not find Zen profile directory matching '*.Default (release)*' under '$ZenDir'" -ForegroundColor Red
+    Write-Host "Error: Could not find Zen profile directory matching '*.Default (twilight)*' under '$ZenDir'" -ForegroundColor Red
     Read-Host "Press Enter to exit"
     exit 1
 }

@@ -15,7 +15,7 @@ if [ ! -d "$ZEN_DIR" ]; then
 fi
 
 # Find the default profile
-PROFILE_DIR=$(find "$ZEN_DIR" -maxdepth 1 -type d -name "*.Default (release)" | head -n 1)
+PROFILE_DIR=$(find "$ZEN_DIR" -maxdepth 1 -type d -name "*.Default (twilight)" | head -n 1)
 if [ -z "$PROFILE_DIR" ]; then
     echo "Error: Could not find Zen profile directory"
     exit 1

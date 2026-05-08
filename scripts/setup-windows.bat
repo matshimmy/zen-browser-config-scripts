@@ -20,7 +20,7 @@ if not exist "%ZEN_DIR%" (
 
 REM Find profile directory (look for .default folders)
 set "PROFILE_DIR="
-for /d %%i in ("%ZEN_DIR%\*.Default (release)") do (
+for /d %%i in ("%ZEN_DIR%\*.Default (twilight)") do (
     set "PROFILE_DIR=%%i"
     goto :found_profile
 )

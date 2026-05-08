@@ -7,7 +7,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Zen profiles directory
-ZEN_DIR="$HOME/.var/app/app.zen_browser.zen/.zen"
+ZEN_DIR="$HOME/.zen"
 if [ ! -d "$ZEN_DIR" ]; then
     echo "Error: Zen directory not found at $ZEN_DIR"
     echo "Make sure Zen Browser is installed and has been run at least once."
